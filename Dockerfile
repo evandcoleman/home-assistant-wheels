@@ -36,7 +36,7 @@ RUN \
     && pip3 install --no-cache-dir \
         -r /usr/src/requirements.txt \
         -r /usr/src/requirements_${CPYTHON_ABI}.txt \
-        --find-links "http://134.209.208.130/musllinux/" \
+        --find-links "https://wheels.olympus.nyc/musllinux/" \
     && rm -rf /usr/src/*
 
 # Install auditwheel
