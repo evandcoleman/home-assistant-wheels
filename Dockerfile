@@ -33,6 +33,7 @@ RUN \
     && if [ "${BUILD_ARCH}" = "i386" ]; then \
         export NPY_DISABLE_SVML=1; \
     fi \
+    && python3 -m pip install --upgrade pip setuptools wheel \
     && pip3 install --no-cache-dir \
         -r /usr/src/requirements.txt \
         -r /usr/src/requirements_${CPYTHON_ABI}.txt \
