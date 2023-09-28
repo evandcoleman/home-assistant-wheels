@@ -112,7 +112,7 @@ def check_available_binary(
             continue
         binary_package_map[binary] = version
 
-    print(f"Checking if binaries already exist for packages {binary_package_map}")
+    print(f"x Checking if binaries already exist for packages {binary_package_map}")
     list_found: Set[str] = check_existing_packages(package_index, binary_package_map)
     print(f"Packages already exist: {list_found}")
     list_needed = binary_package_map.keys() - list_found
@@ -136,7 +136,7 @@ def remove_local_wheels(
     binary_package_map = {
         name: package_map[name] for name in skip_exists if name in package_map
     }
-    print(f"Checking if binaries already exist for packages {binary_package_map}")
+    print(f"y Checking if binaries already exist for packages {binary_package_map}")
     exists = check_existing_packages(package_index, binary_package_map)
     for binary in exists:
         version = binary_package_map[binary]
